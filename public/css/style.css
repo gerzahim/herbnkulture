@@ -4,6 +4,7 @@
     
     background-color: #f2f2f2;*/
     background-color: rgb( 213, 212, 212);
+
   /*  
     border: solid;
     width: 100%;
@@ -43,8 +44,6 @@ a:active {
   font-family: Tw Cen MT;
   src: url('fonts/TwCenMT.ttf');
 }
-
-
 
 .categories{
 
@@ -187,8 +186,8 @@ a.header-short-div {
 .sidebar {
   background-color: #FFF;
   height:450px;
-  padding-top: 0px;
   padding-left: 15px;
+  padding-top: 10px;
 
   
 }
@@ -199,7 +198,7 @@ a.header-short-div {
   height:450px;
   padding-left: 0px;
   padding-right: 15px;
-  padding-top: 0px;
+  padding-top: 10px;
 
 }
 

@@ -5,6 +5,8 @@ namespace Herbnkulture\Http\Controllers\Auth;
 use Herbnkulture\User;
 use Validator;
 use Herbnkulture\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Lang;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
@@ -39,6 +41,19 @@ class AuthController extends Controller
     {
         $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function logout()
+    {
+        Auth::guard($this->getGuard())->logout();
+
+        return view('home');
+    }
+
 
     /**
      * Get a validator for an incoming registration request.

@@ -14,13 +14,13 @@
 
 
 Route::auth();
-
-Route::get('/home', 'HomeController@index');
-
 //Route::get('/', 'HomeController@index');
-
-Route::get('/','MasterController@index');
-
+Route::get('/home', 'HomeController@index');
 Route::get('prueba', function(){
 	return view('welcome');
+});
+
+
+Route::get('/', function(){
+	return view('shop.index');
 });

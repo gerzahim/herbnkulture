@@ -40,7 +40,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
-                    Laravel
+                    Laravel222
                 </a>
             </div>
 

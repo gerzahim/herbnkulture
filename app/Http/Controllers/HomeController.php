@@ -4,6 +4,9 @@ namespace Herbnkulture\Http\Controllers;
 
 use Herbnkulture\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+
 
 class HomeController extends Controller
 {
@@ -18,7 +21,7 @@ class HomeController extends Controller
     }
 
     /**
-     * Show the application dashboard.
+     * Show the application dashboard Home.
      *
      * @return \Illuminate\Http\Response
      */
@@ -26,4 +29,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+ 
 }
