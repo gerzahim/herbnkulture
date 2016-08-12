@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/** 
+ * Default CSS Drop-Down Menu Theme
+ *
+ * @file		default.css
+ * @name		Default
+ * @version		0.1.1
+ * @type		transitional
+ * @browsers	Windows: IE7+, Opera7+, Firefox3+
+ *				Mac OS: Safari2+, Firefox3+
+ *
+ * @link		http://www.lwis.net/free-css-drop-down-menu
+ * @copyright	2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+
+/* -- Base drop-down styling -- */
+
+ul.dropdownv {
+ font-weight: bold;
+}
+
+	ul.dropdownv li {
+	 padding: 7px 10px;
+	 border-style: solid;
+	 border-width: 1px 1px 1px 0;
+	 border-color: #fff #d9d9d9 #d9d9d9;
+	 background-color: #f6f6f6;
+	 color: #000;
+	}
+
+	ul.dropdownv li.hover,
+	ul.dropdownv li:hover,
+	ul.dropdownv li.on {
+	 background-color: #eee;
+	 color: #000;
+	}
+
+	ul.dropdownv a:link,
+	ul.dropdownv a:visited	{ color: #000; text-decoration: none; }
+	ul.dropdownv a:hover		{ color: #000; }
+	ul.dropdownv a:active	{ color: #ffa500; }
+
+	/* -- level mark -- */
+
+	ul.dropdownv ul {
+	 width: 150px;
+	 margin-top: 1px;
+	}
+
+		ul.dropdownv ul li {
+		 font-weight: normal;
+		}
+
+
+/* -- Supporting class `dir` -- */
+
+ul.dropdownv *.dir {
+ padding-right: 20px;
+ background-image: url(../img-css/nav-arrow-down.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+
+/* -- Components override -- */
+
+ul.dropdown-horizontal ul *.dir {
+ padding-right: 15px;
+ background-image: url(../img-css/nav-arrow-right.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+ul.dropdown-upward *.dir {
+ background-image: url(../img-css/nav-arrow-top.png);
+}
+
+ul.dropdown-vertical *.dir,
+ul.dropdown-upward ul *.dir {
+ background-image: url(../img-css/nav-arrow-right.png);
+}
+
+ul.dropdown-vertical-rtl *.dir,
+ul.dropdown-horizontal > li.dropdown-vertical-rtl ul *.dir {
+ padding-right: 10px;
+ padding-left: 15px;
+ background-image: url(../img-css/nav-arrow-left.png);
+ background-position: 2px 50%;
+}

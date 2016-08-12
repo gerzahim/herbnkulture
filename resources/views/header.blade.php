@@ -5,7 +5,7 @@
         <div class="col-sm-3 header-large-div"><img class="logo" src="images/Logoherbnkulture.png">
         </div>
         <div class="col-sm-5 header-large-div"><img class="lema" src="images/Lema1.jpg"></div>
-        <div class="col-sm-4 header-short-div" align="right"><a href="#">Checkout</a> | <a href="#">Login</a> | <a href="#">Join Now</a></div>
+        <div class="col-sm-4 header-short-div" align="right"><a href="#">Checkout</a> | <a href="{{ url('/login') }}">Login</a> | <a href="{{ url('/register') }}">Join Now</a></div>
         <div class="col-sm-4 header-short-div"></div>
         <div class="col-sm-4 header-short-div3" align="right">
           <div class="bottom-content">
