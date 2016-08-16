@@ -22,5 +22,5 @@ Route::get('prueba', function(){
 
 
 Route::get('/', function(){
-	return view('shop.index');
+	return view('master');
 });

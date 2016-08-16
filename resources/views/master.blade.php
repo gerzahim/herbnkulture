@@ -1,56 +1,79 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>HerbnKulture</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- CSS GENERAL -->
-  <link rel="stylesheet" href="css/style.css">  
-  <!-- CSS MENU HORIZONTAL -->
-  <link href="css/menuhorizontal/dropdown_menu.css" media="screen" rel="stylesheet" type="text/css" />
-  <!-- CSS MENU VERTICAL -->
-  <link href="css/menuvertical/dropdown/dropdown.vertical.css" media="screen" rel="stylesheet" type="text/css" />
-  <link href="css/menuvertical/dropdown/default.ultimate.css" media="screen" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Home | E-Shopper</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+</head><!--/head-->
 
-</head>
 <body>
 
+
 <!-- BEGIN HEADER -->
- @include('header')
+  <header id="header"><!--header-->
+ @include('layouts.header')
 <!-- END HEADER -->
-<!-- BEGIN MENUTOP -->
- @include('menutop')
+
+<!-- END MENUTOP -->
+ @include('layouts.menutop')
+   </header><!--/header-->
 <!-- END MENUTOP -->
 
 <!-- BEGIN BANNER -->
- @include('banner')
+ @include('layouts.banner')
 <!-- END BANNER -->
 
-<!-- BEGIN BREADCRUMB -->
- @include('breadcrumber')
-<!-- END BREADCRUMB -->
 
 <!-- BEGIN BODY -->
-  <div class="container-fluid main_bg">
-    <div class="col-sm-2 lateral"></div>
-    <!-- BEGIN SIDEBAR -->
-    @include('sidebar')
-    <!-- END SIDEBAR -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3">
+
+          <!-- BEGIN SIDEBAR -->
+          @include('layouts.sidebar')
+          <!-- END SIDEBAR -->
         
-    <!-- BEGIN CONTENT -->         
-    @include('content')
-    <!-- END CONTENT -->  
-    <div class="col-sm-2 lateral"></div>
-  </div>
+          <!-- BEGIN CONTENT -->         
+          @include('layouts.content')
+          <!-- END CONTENT -->  
+
+
+        </div>
+      </div>
+    </div>
+  </section>
 <!-- END BODY -->
 
 <!-- BEGIN FOOTER -->
- @include('footer')
+ @include('layouts.footer')
 <!-- END FOOTER -->
-
+   
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.scrollUp.min.js"></script>
+  <script src="js/price-range.js"></script>
+  <script src="js/jquery.prettyPhoto.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
+
+

@@ -5,7 +5,15 @@
         <div class="col-sm-3 header-large-div"><img class="logo" src="images/Logoherbnkulture.png">
         </div>
         <div class="col-sm-5 header-large-div"><img class="lema" src="images/Lema1.jpg"></div>
-        <div class="col-sm-4 header-short-div" align="right"><a href="#">Checkout</a> | <a href="<?php echo e(url('/login')); ?>">Login</a> | <a href="<?php echo e(url('/register')); ?>">Join Now</a></div>
+        <?php if(Auth::guest()): ?>
+          <div class="col-sm-4 header-short-div" align="right"><a href="#">Checkout</a> | <a href="<?php echo e(url('/login')); ?>">Login</a> | <a href="<?php echo e(url('/register')); ?>">Join Now</a></div>
+        <?php else: ?>
+          <div class="col-sm-4 header-short-div" align="right"><a href="#"><a href="#">User Account</a> |Checkout</a> | <a href="<?php echo e(url('/logout')); ?>">Logout</a> </div>
+        <?php endif; ?>        
+        <!--
+          <div class="col-sm-4 header-short-div" align="right"><a href="#">
+          Checkout</a> | <a href="<?php echo e(url('/login')); ?>">Login</a> | <a href="<?php echo e(url('/register')); ?>">Join Now</a></div> 
+        -->
         <div class="col-sm-4 header-short-div"></div>
         <div class="col-sm-4 header-short-div3" align="right">
           <div class="bottom-content">
