@@ -29,16 +29,16 @@
 
 <!-- BEGIN HEADER -->
   <header id="header"><!--header-->
- <?php echo $__env->make('layouts.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ @include('layouts.header')
 <!-- END HEADER -->
 
 <!-- END MENUTOP -->
- <?php echo $__env->make('layouts.menutop', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ @include('layouts.menutop')
    </header><!--/header-->
 <!-- END MENUTOP -->
 
 <!-- BEGIN BANNER -->
- <?php echo $__env->make('layouts.banner', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ @include('layouts.banner')
 <!-- END BANNER -->
 
 
@@ -49,11 +49,11 @@
         <div class="col-sm-3">
 
           <!-- BEGIN SIDEBAR -->
-          <?php echo $__env->make('layouts.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          @include('layouts.sidebar')
           <!-- END SIDEBAR -->
         
           <!-- BEGIN CONTENT -->         
-          <?php echo $__env->make('layouts.content', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          @include('layouts.content')
           <!-- END CONTENT -->  
 
 
@@ -64,7 +64,7 @@
 <!-- END BODY -->
 
 <!-- BEGIN FOOTER -->
- <?php echo $__env->make('layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+ @include('layouts.footer')
 <!-- END FOOTER -->
    
   <script src="js/jquery.js"></script>

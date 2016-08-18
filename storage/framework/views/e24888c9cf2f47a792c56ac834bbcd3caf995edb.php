@@ -31,10 +31,10 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="logo pull-left">
-              <a href="index.html"><img width="150px" height="120px" src="images/Logoherbnkulture.png" alt="" /></a>
+              <a href="<?php echo e(url('/home')); ?>"><img width="150px" height="120px" src="images/Logoherbnkulture.png" alt="" /></a>
             </div>
             <div class="lema pull-right">
-              <a href="index.html"><img width="380px" height="100px" src="images/Lema1.jpg" alt="" /></a>
+              <a href="<?php echo e(url('/')); ?>"><img width="380px" height="100px" src="images/Lema1.jpg" alt="" /></a>
             </div>              
             <!--
             <div class="logo pull-right">
@@ -86,13 +86,22 @@
                 <?php endif; ?>
               </ul>
             </div>
-            <div class="pull-right">
-              <form action="#" class="searchform">
-                <p>Get the most recent updates from our site...</p>
-                <input type="text" placeholder="Your email address" />
-                <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>   
-              </form>
-            </div>
+
+             <?php if(Auth::guest()): ?>  
+              <div class="pull-right">
+                <form action="#" class="searchform">
+                  <p>Get the most recent updates from our site...</p>
+                  <input type="text" placeholder="Your email address" />
+                  <button type="submit" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>   
+                </form>
+              </div>
+            <?php else: ?>
+              <div class="pull-right">
+              <p>
+                  <h4>Hello, Gerzahim Salas</h4>
+              </p>  
+              </div>
+            <?php endif; ?>
         
           </div>
         </div>
